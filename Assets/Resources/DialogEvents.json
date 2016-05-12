@@ -1,0 +1,53 @@
+[
+{
+    "ID": "Start",
+    "AudioFile": "Intro",
+    "Buttons": 
+        [
+            {
+                "Text": "Back To Start",
+                "LinkedEventID": "Start"
+            },            
+            {
+                "Text": "Go Left",
+                "LinkedEventID": "LeftEvent"
+            },
+            {
+                "Text": "Go Right",
+                "LinkedEventID": "RightEvent"
+            }
+        ]
+},
+
+{
+    "ID": "LeftEvent",
+    "AudioFile": "LeftEvent",
+    "Buttons": 
+        [
+            {
+                "Text": "Back To Start",
+                "LinkedEventID": "Start"
+            },
+            {
+                "Text": "Go Right",
+                "LinkedEventID": "RightEvent"
+            }
+        ]
+},
+
+{
+    "ID": "RightEvent",
+    "AudioFile": "RightEvent",
+    "Buttons": 
+        [
+            {
+                "Text": "Back To Start",
+                "LinkedEventID": "Start"
+            },
+            {
+                "Text": "Go Left",
+                "LinkedEventID": "LeftEvent"
+            }
+        ]
+}
+]
