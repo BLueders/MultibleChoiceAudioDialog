@@ -25,6 +25,7 @@ public class DialogEventDatabase : Singleton<DialogEventDatabase> {
 		newEvent.Audio = Resources.Load<AudioClip> (Instance.AudioDataPath + "/" + data.AudioFile);
 		newEvent.ID = data.ID;
 		newEvent.Buttons = data.Buttons;
+		newEvent.TimedEvent = data.TimedEvent;
 		return newEvent;
 	}
 

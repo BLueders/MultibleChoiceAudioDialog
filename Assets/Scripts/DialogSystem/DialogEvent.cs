@@ -6,4 +6,5 @@ public class DialogEvent {
 	public string ID;
 	public AudioClip Audio;
 	public List<DialogEventButtonData> Buttons;
+	public TimedEventData TimedEvent;
 }

@@ -6,5 +6,5 @@ public class DialogEventData {
 	public string ID;
 	public string AudioFile;
 	public List<DialogEventButtonData> Buttons;
-
+	public TimedEventData TimedEvent;
 }

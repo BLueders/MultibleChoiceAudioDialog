@@ -20,6 +20,7 @@ public class DialogSceneManager : Singleton<DialogSceneManager> {
 			child.gameObject.SetActive (false);
 			Destroy(child.gameObject);
 		}
+		DialogTimer.StopTimer ();
 		Instance.MainAudioSource.Stop ();
 	}
 
@@ -51,6 +52,11 @@ public class DialogSceneManager : Singleton<DialogSceneManager> {
 		StartCoroutine(ShowButtonsAfterSeconds(nextEvent.Audio.length - 1, nextEvent.Buttons));
 		MainAudioSource.clip = nextEvent.Audio;
 		MainAudioSource.Play ();
+
+		if (nextEvent.TimedEvent != null) {
+			DialogTimer.StartTimer (() => PlayEvent (nextEvent.TimedEvent.OnExpireLinkedEventID), nextEvent.TimedEvent.Duration);
+			SkipCurrentClip ();
+		}
 	}
 
 	bool _skipCurrentClip = false;

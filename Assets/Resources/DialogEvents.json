@@ -15,6 +15,10 @@
             {
                 "Text": "Go Right",
                 "LinkedEventID": "RightEvent"
+            },
+			{
+                "Text": "Do A Timed Event",
+                "LinkedEventID": "TimedEvent"
             }
         ]
 },
@@ -49,5 +53,26 @@
                 "LinkedEventID": "LeftEvent"
             }
         ]
+},
+
+{
+	"ID": "TimedEvent",
+	"AudioFile": "TimedEvent",
+	"Buttons": 
+	    [
+	        {
+	            "Text": "Go Right",
+	            "LinkedEventID": "RightEvent"
+	        },
+			{
+	            "Text": "Go Left",
+	            "LinkedEventID": "LeftEvent"
+	        }
+	    ],
+	"TimedEvent" : 
+		{
+			"Duration" : 15,
+			"OnExpireLinkedEventID" : "Start"
+		}
 }
 ]
